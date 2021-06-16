@@ -1,0 +1,131 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 10898310300,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I navigate to patient grid",
+            "match": {
+              "location": "SD_PatientGrid.I_navigate_to_patient_grid()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 16703995300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "SD_Login.Browser()"
+            }
+          }
+        ],
+        "line": 104,
+        "name": "Verify deleting Scheduled Appointment",
+        "description": "",
+        "id": "soap-note-creation-from-schedule-flow;verify-deleting-scheduled-appointment",
+        "after": [
+          {
+            "result": {
+              "duration": 9526359100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "SD_Login.Logout()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 21445499400,
+              "status": "passed"
+            },
+            "line": 105,
+            "name": "I click on schedule tab",
+            "match": {
+              "location": "SD_SoapNotes.I_click_on_scheduletab()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1313200500,
+              "status": "passed"
+            },
+            "line": 106,
+            "name": "I should see already scheduled appointment",
+            "match": {
+              "location": "SD_SoapNotes.I_should_see_Already_Added_Appointment()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2590196800,
+              "status": "passed"
+            },
+            "line": 107,
+            "name": "I click on three dots",
+            "match": {
+              "location": "SD_SoapNotes.I_Click_Three_Dots()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3057558700,
+              "status": "passed"
+            },
+            "line": 108,
+            "name": "I click on delete appointment",
+            "match": {
+              "location": "SD_SoapNotes.I_Click_delete_appointmentBtn()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1528756100,
+              "status": "passed"
+            },
+            "line": 109,
+            "name": "I should see delete appointment message",
+            "match": {
+              "location": "SD_SoapNotes.I_should_see_appointment_DeleteMessage()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Smoke_USMM_DelateScheduleAppointment"
+          }
+        ]
+      }
+    ],
+    "name": "Soap Note Creation from Schedule flow",
+    "description": "",
+    "id": "soap-note-creation-from-schedule-flow",
+    "keyword": "Feature",
+    "uri": "Include/features/PatientGrid/SoapNote/SoapNotesCreate_AddHRA.feature",
+    "tags": []
+  }
+]

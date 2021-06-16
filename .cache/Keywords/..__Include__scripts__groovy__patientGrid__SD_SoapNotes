@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "BDA80BA5137DA03F404DB865336B76ED",
+  "keywordClasses": [
+    {
+      "name": "patientGrid.SD_SoapNotes",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}
