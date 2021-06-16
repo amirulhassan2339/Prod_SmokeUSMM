@@ -1,9 +1,9 @@
 [
   {
-    "line": 1,
+    "line": 2,
     "elements": [
       {
-        "line": 3,
+        "line": 4,
         "name": "",
         "description": "",
         "type": "background",
@@ -11,10 +11,10 @@
         "steps": [
           {
             "result": {
-              "duration": 10898310300,
+              "duration": 10373950600,
               "status": "passed"
             },
-            "line": 4,
+            "line": 5,
             "name": "I navigate to patient grid",
             "match": {
               "location": "SD_PatientGrid.I_navigate_to_patient_grid()"
@@ -27,7 +27,7 @@
         "before": [
           {
             "result": {
-              "duration": 16703995300,
+              "duration": 18916611200,
               "status": "passed"
             },
             "match": {
@@ -35,14 +35,14 @@
             }
           }
         ],
-        "line": 104,
-        "name": "Verify deleting Scheduled Appointment",
+        "line": 51,
+        "name": "Search Patient Using MRN From Patient Grid",
         "description": "",
-        "id": "soap-note-creation-from-schedule-flow;verify-deleting-scheduled-appointment",
+        "id": "search-patient;search-patient-using-mrn-from-patient-grid;;2",
         "after": [
           {
             "result": {
-              "duration": 9526359100,
+              "duration": 10970552800,
               "status": "passed"
             },
             "match": {
@@ -51,81 +51,81 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 21445499400,
+              "duration": 18991689200,
               "status": "passed"
             },
-            "line": 105,
-            "name": "I click on schedule tab",
+            "line": 46,
+            "name": "I search PE05E6ECEF0E46443B887BA108B24D9049 using global search",
             "match": {
-              "location": "SD_SoapNotes.I_click_on_scheduletab()"
+              "arguments": [
+                {
+                  "val": "PE05E6ECEF0E46443B887BA108B24D9049",
+                  "offset": 9
+                }
+              ],
+              "location": "SD_SearchPatient.search_Patient(String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 1313200500,
+              "duration": 654909100,
               "status": "passed"
             },
-            "line": 106,
-            "name": "I should see already scheduled appointment",
+            "line": 47,
+            "name": "I should see ADam, Tom as patient with PE05E6ECEF0E46443B887BA108B24D9049 as MRN and 02/02/2000 as DOB and Active as Status on patient grid",
             "match": {
-              "location": "SD_SoapNotes.I_should_see_Already_Added_Appointment()"
+              "arguments": [
+                {
+                  "val": "ADam, Tom",
+                  "offset": 13
+                },
+                {
+                  "val": "PE05E6ECEF0E46443B887BA108B24D9049",
+                  "offset": 39
+                },
+                {
+                  "val": "02/02/2000",
+                  "offset": 85
+                },
+                {
+                  "val": "Active",
+                  "offset": 107
+                }
+              ],
+              "location": "SD_SearchPatient.Patient_should_be_verified(String,String,String,String)"
             },
             "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 2590196800,
-              "status": "passed"
-            },
-            "line": 107,
-            "name": "I click on three dots",
-            "match": {
-              "location": "SD_SoapNotes.I_Click_Three_Dots()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 3057558700,
-              "status": "passed"
-            },
-            "line": 108,
-            "name": "I click on delete appointment",
-            "match": {
-              "location": "SD_SoapNotes.I_Click_delete_appointmentBtn()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 1528756100,
-              "status": "passed"
-            },
-            "line": 109,
-            "name": "I should see delete appointment message",
-            "match": {
-              "location": "SD_SoapNotes.I_should_see_appointment_DeleteMessage()"
-            },
-            "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@Smoke_USMM_DelateScheduleAppointment"
+            "name": "@PatientGrid"
+          },
+          {
+            "name": "@SearchByMRN"
           }
         ]
       }
     ],
-    "name": "Soap Note Creation from Schedule flow",
+    "name": "Search Patient",
     "description": "",
-    "id": "soap-note-creation-from-schedule-flow",
+    "id": "search-patient",
     "keyword": "Feature",
-    "uri": "Include/features/PatientGrid/SoapNote/SoapNotesCreate_AddHRA.feature",
-    "tags": []
+    "uri": "Include/features/PatientGrid/SearchPatient.feature",
+    "tags": [
+      {
+        "name": "@PatientGrid",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
   }
 ]
