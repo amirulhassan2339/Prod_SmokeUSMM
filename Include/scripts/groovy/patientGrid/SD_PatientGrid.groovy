@@ -33,8 +33,6 @@ public class SD_PatientGrid {
 		}
 
 
-
-
 		//
 		//		WebUI.waitForElementClickable(findTestObject('OR_HomePage/Obj_QAmhpn'), 2)
 		////
